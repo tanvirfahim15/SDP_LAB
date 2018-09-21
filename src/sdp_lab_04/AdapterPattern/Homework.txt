@@ -1,1 +1,1 @@
-Adapter for Enumaration to Adapter
+Adapter for Enumaration to List
