@@ -16,8 +16,13 @@ public class Test {
         Observer o2 = new StatisticalDisplay();
         s.registerObserver(o1);
         s.registerObserver(o2);
+        s.registerObserver(new CurrentConditions());
         ((WeatherData)s).temperature=20;
         ((WeatherData)s).measurementChanged();
-        
+        s.removeObserver(o2);
+        System.out.println();
+        ((WeatherData)s).measurementChanged();
+
+
     }
 }
